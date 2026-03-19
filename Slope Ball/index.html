@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <span id="macvgmacvg" name="game207"></span>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta charset="utf-8" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <title class="cloak">Slope Ball | MacVG</title>
+    <link class="favicon" rel="shortcut icon" href="/logo.png" />
+    <script src="/macvg/cloaker.js"></script>
+    <script type="application/javascript" src="/js/main.js"></script>
+    <link rel="stylesheet" href="files/game.css" type="text/css" />
+    <link rel="apple-touch-icon" href="files/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon-precomposed" href="files/favicon.png" type="image/png" />
+    <link rel="apple-touch-startup-image" href="files/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <div id="sg-orient-screen"></div>
+    <div id="sg-loading-screen"></div>
+    <div id="sg-loading-bar-back"><div id="sg-loading-bar"></div></div>
+    <div class="gm4html5_div_class" id="gm4html5_div_id">
+      <canvas id="canvas" width="960" height="1280">
+        <p>Your browser doesn't support HTML5 canvas.</p>
+      </canvas>
+    </div>
+    <script type="text/javascript">
+      splash_w = 960;
+      splash_h = 1280;
+      bar_img_w = 400;
+      bar_img_h = 44;
+      bar_img_x = (splash_w - bar_img_w) / 2;
+      bar_img_y = 1160;
+      canvasobj = document.getElementById("canvas");
+      loadbarobj = document.getElementById("sg-loading-bar");
+      loadbarbackobj = document.getElementById("sg-loading-bar-back");
+      orientobj = document.getElementById("sg-orient-screen");
+      loadingobj = document.getElementById("sg-loading-screen");
+      document.addEventListener(
+        "touchmove",
+        function (e) {
+          e.preventDefault();
+        },
+        false
+      );
+    </script>
+    <script type="text/javascript" src="files/Slope.js?SJSAC=2098137795"></script>
+  
+<!-- SYSTEM_INJECTED_AD_BLOCKER -->
+<script>
+(function(){
+    // 1. Block window.open
+    const originalOpen = window.open;
+    window.open = function(url, windowName, windowFeatures) {
+        console.log('Blocked popup to:', url);
+        return null; // Prevent opening
+    };
+
+    // 2. Block external link clicks
+    document.addEventListener('click', function(e) {
+        let target = e.target;
+        while(target && target.tagName !== 'A') {
+            target = target.parentNode;
+        }
+        if(target && target.tagName === 'A' && target.href) {
+            // Allow our injected ad link
+            if(target.className.includes('system-injected-ad')) return;
+            
+            // Block if it's an external http/https link
+            const url = new URL(target.href, window.location.href);
+            if(url.protocol.startsWith('http') && url.hostname !== window.location.hostname) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Blocked external link to:', target.href);
+            }
+        }
+    }, true); // use capture phase to catch event early
+})();
+</script>
+
+<!-- RECTANGULAR BANNER PLACEHOLDER -->
+<div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); z-index: 2147483647; display: flex; flex-direction: column; align-items: center; pointer-events: auto;">
+  <a href="https://your-other-website.com" target="_blank" class="system-injected-ad" style="display: flex; justify-content: center; align-items: center; width: 320px; height: 50px; background-color: #eab308; color: #1e3a8a; text-decoration: none; font-family: Arial, sans-serif; font-weight: 900; font-size: 16px; border: 2px solid #ca8a04; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    YOUR AD HERE
+  </a>
+</div>
+<!-- /SYSTEM_INJECTED_AD_BLOCKER -->
+
+</body>
+</html>

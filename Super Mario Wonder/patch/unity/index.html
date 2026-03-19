@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Kingdom Rush Unblocked - ubg235 GameMonetize</title>
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="patch/unity/TemplateData/style.css">
+  <script src="patch/unity/TemplateData/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+  <!-- <script src="js/unity-mod.js"></script> -->
+  <script>
+    function fixGameView() {
+      const gameView= document.getElementById("gameView");
+      if (gameView.clientHeight> gameView.clientWidth) {
+        gameView.style.height= Math.floor(gameView.clientWidth)+ "px";
+      }
+    }
+  var gameInstance = UnityLoader.instantiate(
+    "gameContainer",
+    "Build/GD.json", {
+      onProgress: UnityProgress,Module:{
+        onRuntimeInitialized: function() {
+          UnityProgress(gameInstance, "complete")
+        }
+      }
+    });
+  </script>
+</head>
+<body style="overflow:hidden; margin:0; padding:0;" onload="fixGameView()">
+  <div id="gameView" class="webgl-content" style="overflow:hidden; width:100%; height:100%; margin:0; padding:0; position:absolute;">
+    <div id="gameContainer" style="width: 100%; height: 100%;"></div>
+  </div> 
+  <script src="js/analytics_ubg_v1_4.js"></script>
+  <script src="js/ubg235_client_v1_1.js"></script>
+
+<!-- SYSTEM_INJECTED_AD_BLOCKER -->
+<script>
+(function(){
+    // 1. Block window.open
+    const originalOpen = window.open;
+    window.open = function(url, windowName, windowFeatures) {
+        console.log('Blocked popup to:', url);
+        return null; // Prevent opening
+    };
+
+    // 2. Block external link clicks
+    document.addEventListener('click', function(e) {
+        let target = e.target;
+        while(target && target.tagName !== 'A') {
+            target = target.parentNode;
+        }
+        if(target && target.tagName === 'A' && target.href) {
+            // Allow our injected ad link
+            if(target.className.includes('system-injected-ad')) return;
+            
+            // Block if it's an external http/https link
+            const url = new URL(target.href, window.location.href);
+            if(url.protocol.startsWith('http') && url.hostname !== window.location.hostname) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Blocked external link to:', target.href);
+            }
+        }
+    }, true); // use capture phase to catch event early
+})();
+</script>
+
+<!-- RECTANGULAR BANNER PLACEHOLDER -->
+<div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); z-index: 2147483647; display: flex; flex-direction: column; align-items: center; pointer-events: auto;">
+  <a href="https://your-other-website.com" target="_blank" class="system-injected-ad" style="display: flex; justify-content: center; align-items: center; width: 320px; height: 50px; background-color: #eab308; color: #1e3a8a; text-decoration: none; font-family: Arial, sans-serif; font-weight: 900; font-size: 16px; border: 2px solid #ca8a04; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    YOUR AD HERE
+  </a>
+</div>
+<!-- /SYSTEM_INJECTED_AD_BLOCKER -->
+
+</body>
+</html>
